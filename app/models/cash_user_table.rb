@@ -6,4 +6,9 @@ class CashUserTable < ActiveRecord::Base
   	validates :user_id , presence: true
   	validates :cash_table_id , presence: true
   	
+
+  	/In boolean case:
+  		validates_inclusion_of :(name_entidad) => [true, false]/
 end
+
+

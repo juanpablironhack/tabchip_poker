@@ -19,4 +19,5 @@ class CashTable < ActiveRecord::Base
 	/validar que es tipo: float/
 	validates :small_blind, numericality: true
 
+	serialize :state_data, Hash
 end
