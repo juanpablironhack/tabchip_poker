@@ -26,7 +26,10 @@ class AddDeviseToUsers < ActiveRecord::Migration
       t.integer :account_bank 
       t.date  :date_of_birth
       t.float :money_total, null: false, default: 0
-      t.integer :big_blinds, null: false, default: 0
+      #The next field is the number of big blinds for a player; it would split the total money value of the big blind it
+      #big_blinds = money_total / big_blind
+      t.integer :big_blinds, null: false, default: 0 
+      
 
       ## Confirmable
       # t.string   :confirmation_token
