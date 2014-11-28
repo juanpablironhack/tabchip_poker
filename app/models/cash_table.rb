@@ -16,9 +16,15 @@ class CashTable < ActiveRecord::Base
 	#Validate that is data type: float, also used numericality?
 	validates :small_blind, numericality: true
 
-	validates :turn_player, ########
+	validates :player_turn, ########
+	validates :pre_flop_turn, #########
+    validates :flop_turn, #########
+    validates :turn_turn, #########
+    validates :river_turn, #########
 
-	validates :win_player, #########
+	validates :player_win, #########
+
+	validates :turn_time, #########
 
 	validates :one_third_pot, presence: true
 	#Validate that is data type: float, also used numericality?
