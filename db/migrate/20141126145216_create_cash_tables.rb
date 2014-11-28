@@ -12,15 +12,15 @@ class CreateCashTables < ActiveRecord::Migration
     	t.text :state_player, null: false
 
     	#The next field would be to ask whether the player won at the end of the hand
-      t.boolean :player_turn, #########
+      t.boolean :player_turn #########
       ###At Poker 4 different shifts: pre-flop bet, bet in flop, bet in turn and river bet. Then I add the 4 types of turns.
-      t.boolean :pre_flop_turn, #########
-      t.boolean :flop_turn, #########
-      t.boolean :turn_turn, #########
-      t.boolean :river_turn, #########
+      t.boolean :pre_flop_turn #########
+      t.boolean :flop_turn #########
+      t.boolean :turn_turn #########
+      t.boolean :river_turn #########
 
       #The next field would be to ask that player touches you to action
-    	t.boolean :player_win, #########
+    	t.boolean :player_win #########
 
       #The next field would be to count the time for each player's turn
     	t.datetime :turn_time, null: false, default: 60 #60 seconds
@@ -33,12 +33,12 @@ class CreateCashTables < ActiveRecord::Migration
   		t.float :total_pot
 
   		###The nexts fields are actions of players:
-  		t.boolean :call, ###########
-  		t.boolean :fold, ###########
-  		t.boolean :bet_one_third_pot, ##########
-  		t.boolean :bet_half_pot, ##########
-  		t.boolean :bet_pot_pot, ##########+
-  		t.boolean :bet_x_bb, ########## #This can serve action for bet a  determinated number of big blinds.
+  		t.boolean :call ###########
+  		t.boolean :fold ###########
+  		t.boolean :bet_one_third_pot ##########
+  		t.boolean :bet_half_pot ##########
+  		t.boolean :bet_pot_pot ##########+
+  		t.boolean :bet_x_bb ########## #This can serve action for bet a  determinated number of big blinds.
 
 
     	t.timestamps null: false

@@ -12,10 +12,10 @@ class InGameProfile < ActiveRecord::Base
 	#Validate that is data type: float, also used numericality?
 	validates :small_blind, numericality: true
 
-	validates :my_turn, ########
+	validates_inclusion_of :my_turn => [true, false]
 
-	validates :my_win, #########
+	validates_inclusion_of :my_win => [true, false]#
 
-	validates :turn_time, #########
+	validates_inclusion_of :turn_time => [true, false]#
 
 end
