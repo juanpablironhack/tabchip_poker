@@ -40,6 +40,7 @@ class CreateCashTables < ActiveRecord::Migration
   		t.boolean :bet_pot_pot ##########+
   		t.boolean :bet_x_bb ########## #This can serve action for bet a  determinated number of big blinds.
 
+      ###Serialize, will be updated in each hand: :number_players, :state_player, :player_turn, :player_win and :turn_time
 
     	t.timestamps null: false
     end

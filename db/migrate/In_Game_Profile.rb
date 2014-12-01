@@ -17,9 +17,11 @@ class InGameProfile < ActiveRecord::Migration
         t.boolean :turn_others_positions #########
 
         ###The next field would be to ask if I won.
-    	t.boolean :my_win #########
+    	t.boolean :my_win ######### (TAL VEZ SOLO HACE FALTA EN CASH TABLES)
 
-    	t.datetime :turn_time, null: false, default: 60 #60 seconds
+    	t.datetime :turn_time, null: false, default: 60 #60 seconds (TAL VEZ SOLO HACE FALTA EN CASH TABLES)
+
+        ###Serialize, will be updated in each hand: :partial_money, :big_blinds, :small_blinds, :my_turn, :turn_bb, :turn_sb, :turn_others_positions, :my_win
 
     	t.timestamps null: false
     end
